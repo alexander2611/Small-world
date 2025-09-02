@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machu Picchu Pueblo - Experiencia Turística Única</title>
+    
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlace a nuestros archivos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Small world</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#attractions">Atracciones</a></li>
+                    <li><a href="#hotels">Hoteles</a></li>
+                    <li><a href="#restaurants">Restaurantes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+<section class="hero" aria-label="Bienvenida a Machu Picchu Pueblo">
+    <div class="hero-content">
+        <h1>Descubre la Magia de Machu Picchu Pueblo</h1>
+        <p>Encuentra los mejores lugares turísticos, hoteles y restaurantes en la puerta de entrada a la maravilla inca</p>
+        
+        <div class="search-container">
+            <form class="search-box" role="search" aria-label="Buscar en el sitio">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Buscar atracciones, hoteles, restaurantes..."
+                    aria-describedby="search-help"
+                >
+                <button type="submit" aria-label="Realizar búsqueda">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+            <p id="search-help" class="sr-only">Presiona Enter o el botón de búsqueda para encontrar resultados</p>
+        </div>
+    </div>
+    
+<button class="scroll-down" aria-label="Desplazarse hacia abajo">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+    
+    <!-- Imagen de fondo optimizada -->
+    <img 
+        src="https://images.unsplash.com/photo-1583387348416-5c043d5d66d0?auto=format&fit=crop&w=1200&h=800&q=80" 
+        alt="" 
+        class="hero-background" 
+        loading="eager"
+        decoding="async"
+    >
+</section>
+
+    <div class="container">
+        <section id="attractions">
+            <h2 class="section-title">Lugares Turísticos</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="historical">Históricos</button>
+                <button class="category-btn" data-category="natural">Naturales</button>
+                <button class="category-btn" data-category="cultural">Culturales</button>
+            </div>
+            <div class="items-grid" id="attractions-grid">
+                <!-- Los elementos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <section id="hotels" style="margin-top: 4rem;">
+            <h2 class="section-title">Hoteles y Alojamientos</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="luxury">Lujo</button>
+                <button class="category-btn" data-category="midrange">Medio</button>
+                <button class="category-btn" data-category="budget">Económicos</button>
+            </div>
+            <div class="items-grid" id="hotels-grid">
+                <!-- Los elementos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <section id="restaurants" style="margin-top: 4rem;">
+            <h2 class="section-title">Restaurantes</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="peruvian">Peruana</button>
+                <button class="category-btn" data-category="international">Internacional</button>
+                <button class="category-btn" data-category="cafe">Cafés</button>
+            </div>
+            <div class="items-grid" id="restaurants-grid">
+                <!-- Los elementos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para detalles -->
+    <div class="modal" id="detail-modal">
+        <div class="modal-content">
+            <div class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <img class="modal-image" id="modal-image" src="" alt="">
+            <div class="modal-body">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <p class="modal-description" id="modal-description"></p>
+                
+                <div class="modal-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h4>Categoría</h4>
+                        <p id="modal-category"></p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Calificación</h4>
+                        <p id="modal-rating"></p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h4>Precio</h4>
+                        <p id="modal-price"></p>
+                    </div>
+                </div>
+                
+                <div id="modal-extra"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Machu Picchu Pueblo</h3>
+                <p>Tu guía definitiva para explorar la maravilla inca y sus alrededores. Encuentra los mejores lugares para visitar, hospedarte y disfrutar de la gastronomía local.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+        
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Machu Picchu Pueblo, Aguas Calientes, Perú</li>
+                    <li><i class="fas fa-phone"></i> +51 984 123 456</li>
+                    <li><i class="fas fa-envelope"></i> info@machupicchupueblo.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 Machu Picchu Pueblo - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Enlace a nuestros archivos JavaScript -->
+        <!-- Enlace a nuestros archivos JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Enlace a nuestro archivo JavaScript para la sección hero -->
+    <script src="js/hero.js"></script>
+</body>
+</html>
