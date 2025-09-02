@@ -239,7 +239,7 @@ const data = {
             id: 8,
             name: "Chullpi Machu Picchu",
             description: "Cocina de autor con ingredientes locales en presentaciones modernas.",
-            image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+            image: "https://www.theonlyperuguide.com/wp-content/uploads/2014/08/Chullpi-Restaurant-Machu-Picchu-1.jpg",
             category: "peruvian",
             rating: 4.7,
             price: "Precio medio: $45",
@@ -247,19 +247,19 @@ const data = {
         },
         {
             id: 9,
-            name: "Cafe Mayu",
+            name: "Perú Cafe Machupicchu",
             description: "Cafetería junto al río con sandwiches, ensaladas y excelente café.",
-            image: "https://images.unsplash.com/photo-1445116572660-236099ec97a0",
+            image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/c6/e1/8b/creppes-ice-coffee-todo.jpg?w=1400&h=800&s=1",
             category: "cafe",
             rating: 4.2,
             price: "Precio medio: $12",
-            details: "Ubicado junto al río Vilcanota, este café ofrece un ambiente relajado con el sonido del agua de fondo. Especializado en sandwiches gourmet, ensaladas frescas y café de calidad. Ideal para un desayuno rápido antes de subir a Machu Picchu o para una merienda ligera. Tienen opciones vegetarianas y veganas, y postres caseros deliciosos."
+            details: "Perú Café se encuentra en la maravilla del mundo machupicchu,ofreciendo bebidas a base de café de nuestro perú, también contamos con servicio de pasteleria y repostería , ahora con servicio to go y salón"
         },
         {
             id: 10,
-            name: "Kintaro Japanese Restaurant",
+            name: "K-food machu picchu ",
             description: "Auténtica comida japonesa en el corazón de los Andes. Fusión nikkei única.",
-            image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV-19ulqIg7_Dssn4zEenLI8sJ0aYJ2ZS0fQ&s",
             category: "international",
             rating: 4.4,
             price: "Precio medio: $28",
